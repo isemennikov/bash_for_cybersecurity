@@ -28,7 +28,7 @@ echo "there are $COUNT_ARG agruments"
 i=1
 for arg in "$@"
 do
-    echo "arg: $i: $arg"
+    echo "arg$i: $arg"
     ((i++))
 done
 
