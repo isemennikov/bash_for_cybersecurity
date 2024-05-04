@@ -1,0 +1,9 @@
+1
+    Write a regular expression corresponding to the decimal number,
+example 3.14. There may be numbers on either side of the decimal point, but they are not required.
+It is desirable that they be on the left or on the right. In a regular expression it should
+only the decimal point matches.
+    
+    Solution: egrep '3[.]14' numbers.txt
+
+2
