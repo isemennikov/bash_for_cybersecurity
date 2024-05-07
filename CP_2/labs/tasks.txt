@@ -30,4 +30,4 @@ arg5: test
 $
 
 5. Modify argcnt.sh so that it only prints even-numbered arguments.
-To view additional resources and get answers to these questions
+To view additional resources and get answers to these question
