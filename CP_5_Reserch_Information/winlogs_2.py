@@ -5,6 +5,7 @@ import shutil
 import tarfile
 import hashlib
 from datetime import datetime
+from pathlib import Path
 
 def main(log_dir):
     # Создание каталога для файлов EVTX
