@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # SepCMDS - отделение команд от строки ввода 
-set -x 
+
 function SepCmds()
 {
     LCMD=${ALINE%%|*}
