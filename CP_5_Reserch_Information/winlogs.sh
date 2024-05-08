@@ -10,24 +10,24 @@ then
     fi
 fi
 SYSNAM=$(hostname)
-LOGDIR=${1:-/tmp/${SYSNAM}_logs}
+LOGDIR=${1:-/tmp/${SYSNAM}_logs}        #3
 
 
 mkdir -p $LOGDIR
-cd ${LOGDIR} || exit -2
+cd ${LOGDIR} || exit -2                 #4
 
-wevtutil el | while read ALOG
+wevtutil el | while read ALOG           #5
 do
-    ALOG="${ALOG%$'\r'}"
-    echo "${ALOG}:"
-    SAFNAM="${ALOG// /_}"
+    ALOG="${ALOG%$'\r'}"                #6
+    echo "${ALOG}:"                     #7
+    SAFNAM="${ALOG// /_}"               #8
     SAFNAM="${SAFNAM//\//-}"
     wevtutil epl "$ALOG" "${SYSNAM}_${SAFNAM}.evtx"
 done
 
-if (( TGZ ==1))
+if (( TGZ ==1))                         #9
 then
-    tar -czf ${SYSNAM}_logs.tgz *.evtx
+    tar -czf ${SYSNAM}_logs.tgz *.evtx  #10
 fi
 
 
