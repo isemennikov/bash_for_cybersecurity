@@ -21,7 +21,7 @@ function SepCmds()
 function DumpInfo()
     {
         printf '<systeminfo host="%s" type="%s"' "$HOSTNAME" "$OSTYPE"
-        printf ' date="%s" time="%s">\n' "$(date '+%F')" "$(date '+%T')" UTC "$(date '+%z')"
+        printf ' date="%s" time="%s" UTC="%s">\n' "$(date '+%F')" "$(date '+%T')" "$(date '+%z')"
         readarray CMDS
         for ALINE in "${CMDS[@]}"
         do
