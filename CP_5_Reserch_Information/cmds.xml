@@ -2,12 +2,12 @@
 #-----------------------+-------------+--------------+------------------------------
 uname -a                |uname -a     |uname         |O.S. version etc
 whoami                  |whoami       |username      |Username
-cat /etc/os-relesase    |             |release vers  |For linux only 
+cat /etc/os-relesase    |             |release_vers  |For linux only 
 cat /proc/cpuinfo       |systeminfo   |sysinfo       |system hardware and realated info
-ip addr show            |ipconfig     |nwinterface   |Network interface information
+ip addr show            |ipconfig     |nwinterfaces  |Network interface information
 ip route                |route print  |nwroute       |Routing table
 ip neigh show           |arp -a       |nwarp         |ARP table
 netstat -a              |netstat -a   |netstat       |Metwork connection
 mount                   |net share    |diskiinfo     |Mounted disks
 ps -e                   |tasklist     |processes     |Running processes
-who                     |who          |open sessions |Open net session 
+who                     |who          |open_sessions |Open net session 

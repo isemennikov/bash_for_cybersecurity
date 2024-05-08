@@ -39,7 +39,7 @@ function DumpInfo()
             else
                 printf "<%s>\n" $TAG
                 $CMD
-                print "</%s>\n" $TAG
+                printf "</%s>\n" $TAG
             fi
         done
         printf "</systeminfo>\n"
