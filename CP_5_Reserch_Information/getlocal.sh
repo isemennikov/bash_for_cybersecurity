@@ -6,7 +6,7 @@ function SepCmds()
 {
     LCMD=${ALINE%%|*}
     REST=${ALINE#*|}
-    WCMD=${REST55|*}
+    WCMD=${REST%%|*}
     REST=${REST#*|}
     TAG=${REST%%|*}
 
@@ -52,4 +52,3 @@ function DumpInfo()
     # собираем в tmp file как информацию и ошибки 
 
     DumpInfo > $TMPFILE 2>&1
-    
