@@ -28,11 +28,11 @@ def main(log_dir):
     archive_name = f"{os.environ['COMPUTERNAME']}_logs_evtx_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.tar.gz"
     with tarfile.open(archive_name, "w:gz") as tar:
         for evtx_file in evtx_files:
-            tar.add(evtx_file, arcname=os.path.basename(evtx_file))
+            tar.add(evtx_file, arcname = evtx_file.name)
 
     # Удаление файлов EVTX
     for evtx_file in evtx_files:
-        os.remove(evtx_file)
+        evtx_file.unlink()
 
     # Вывод пути к файлу архива
     archive_path = os.path.join(log_dir, archive_name)
