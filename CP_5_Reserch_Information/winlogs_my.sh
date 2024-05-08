@@ -25,8 +25,12 @@ wevtutil el | while read ALOG; do
 done
 
 # Архивирование файлов EVTX
-tar -czf "logs_evtx.tar.gz" *.evtx
-ARCHIVE_PATH="${LOGDIR}/logs_evtx.tar.gz"
-
-# Выводим сообщение о успешном завершении скрипта и пути к файлу архива
-echo "Скрипт успешно выполнен. Файл архива: ${ARCHIVE_PATH}"
+if tar -czf "logs_evtx.tar.gz" *.evtx; then
+    ARCHIVE_PATH="${LOGDIR}/logs_evtx.tar.gz"
+    # Удаление файлов EVTX после успешного архивирования
+    find $LOGDIR -type f -name "*.evtx" -print0 | xargs -0 rm --
+    # Выводим сообщение о успешном завершении скрипта и пути к файлу архива
+    echo "Скрипт успешно выполнен. Файл архива: ${ARCHIVE_PATH}"
+else
+    echo "Ошибка при создании архива. Скрипт завершился с ошибкой."
+fi
