@@ -1,0 +1,20 @@
+1
+    Write a regexp corresponding to the decimal number,example 3.14. 
+There may be numbers on either side of the decimal point, but they are not required.
+It is desirable that they be on the left or on the right. In a regular expression it should only the decimal point matches.
+    
+    Solution: egrep '3[.]14' numbers.txt
+
+2
+
+
+
+3
+    Write a regexp  that will do the following:search for a string starting with a number and ending with a number, while
+Anything can happen between these numbers.
+    Solution: egrep '^[0-9].*[0-9]$' numbers.txt 
+
+ 4 
+    Write a regular expression that uses grouping to match delivery to the following two IP addresses: 10.0.0.25 and 10.0.0.134.
+    Solution:   egrep '(10.0.0.25|10.0.0.134)' numbers.txt
+

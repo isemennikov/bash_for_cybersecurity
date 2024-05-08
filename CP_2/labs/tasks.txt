@@ -1,0 +1,33 @@
+Exercises for Chapter #2
+1. Experiment with the uname command and see what it outputs:
+personal operating systems. Rewrite the osdetect.sh script to
+use the uname command with one of its options. Attention: in different operations
+Not all options are available on online systems.
+
+2. Modify the osdetect.sh script to use the function. Place
+the if/then/else logic inside the function and then called from the script. At the very
+there should be no output from the function. Draw the conclusion from the main part of the script.
+
+3. Set the osdetect.sh script to execute permissions (see man chmod),
+so that you can run it without using bash as the first
+words on the command line. How do you call the script now?
+
+4. Write a script called argcnt.sh that reports the number of transmitted
+arguments added to it:
+
+    Modify your script to also output each argument one at a time
+in line.
+
+    Modify the script so that each argument is marked with the following
+at once:
+$ bash argcnt.sh this is a "real live" test
+there are 5 arguments
+arg1: this
+arg2: is
+arg3:a
+arg4: real live
+arg5: test
+$
+
+5. Modify argcnt.sh so that it only prints even-numbered arguments.
+To view additional resources and get answers to these question
