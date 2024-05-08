@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # SepCMDS - отделение команд от строки ввода 
-
+set -x 
 function SepCmds()
 {
     LCMD=${ALINE%%|*}
@@ -49,6 +49,6 @@ function DumpInfo()
     HOSTNM=$(hostname)
     TMPFILE="${HOSTNM}.info"
 
-    # собираем в tmp file как информацию и ошибки 
+    # собираем в tmp file как информацию так и ошибки 
 
     DumpInfo > $TMPFILE 2>&1
