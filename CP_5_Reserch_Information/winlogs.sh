@@ -25,9 +25,10 @@ do
     wevtutil epl "$ALOG" "${SYSNAM}_${SAFNAM}.evtx"
 done
 
-if (( TGZ==1))                         #9
+if (( TGZ==1))                           #9
 then
     tar -czf ${SYSNAM}_logs.tgz *.evtx  #10
+    echo "The archive was saved: $(pwd)/${SYSNAM}_logs.tgz"
 fi
 
-
+echo "---END OF SCRIPT---"
