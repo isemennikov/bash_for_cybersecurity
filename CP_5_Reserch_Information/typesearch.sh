@@ -16,6 +16,7 @@ while getopts 'c:irR' opt; do
         c) # copy fined files to dir
             COPY=YES
             DESTDIR="$OPTARG"
+            ;;
         i) # ignore case when searching
             CASEMATCH='-i'
             ;;
