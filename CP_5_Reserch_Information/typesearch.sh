@@ -28,7 +28,7 @@ while getopts 'c:irR' opt; do
 done
 shift $((OPTIND -1 ))
 
-PATTERN=${1: -PDF document}
+PATTERN=${1:-PDF document}
 STARTDIR=${2:-.} #start here by default
 
 find $STARTDIR $DEEPORNOT -type f | while read FN
